@@ -22,6 +22,9 @@ class UserInfo2(UserInfo):
         super(UserInfo2, self).__init__(name, age)
         self.sex = sex
 
+    def get_info(self):
+        return f"Name: {self.name}, Age: {self._age}, Sex: {self.sex}, Level: {self.get_lv()}"
+
 if __name__ == '__main__':
     userInfo2 = UserInfo2('anwen', 23, '男')
     # 打印所有属性
@@ -29,16 +32,21 @@ if __name__ == '__main__':
     # 打印构造函数中的属性
     print(userInfo2.__dict__)
     print(UserInfo2.get_lv())
+    # 打印用户信息
+    print(userInfo2.get_info())
 
 # 子类的类型判断 isinstance
 class Animal(object):
-    pass
+    def speak(self):
+        pass
 
 class Dog(Animal):
-    pass
+    def speak(self):
+        return "Woof!"
 
 class Cat(Animal):
-    pass
+    def speak(self):
+        return "Meow!"
 
 if __name__ == '__main__':
     dog = Dog()
@@ -51,3 +59,12 @@ if __name__ == '__main__':
     print(isinstance('anwen', str))
     print(isinstance(123, int))
     print(isinstance(123, str))
+
+    # 调用子类的方法
+    print(dog.speak())
+    print(cat.speak())
+
+    # 多态性
+    animals = [Dog(), Cat()]
+    for animal in animals:
+        print(animal.speak())

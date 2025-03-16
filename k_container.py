@@ -17,15 +17,16 @@ __getitem__(self,k)  # 实现 container[key] 取值
 __setitem__(self,k,v)# 实现 container[key]=value 赋值
 __delitem__(self,k)  # 实现 del container[key] 删除
 __iter__(self)       # 实现迭代功能 for x in container
+__reversed__(self)   # 实现反向迭代功能 for x in reversed(container)
 
 3. 使用示例
 -------------
 # 创建自定义列表
 fl = FunctionalList([1,2,3,4,5])
-fl.head()    # 获取首元素: 1
-fl.tail()    # 获取除首元素外的列表: [2,3,4,5]
-fl.take(2)   # 获取前2个元素: [1,2]
-fl.drop(2)   # 删除前2个元素后的列表: [3,4,5]
+print(fl.head())    # 获取首元素: 1
+print(fl.tail())    # 获取除首元素外的列表: [2,3,4,5]
+print(fl.take(2))   # 获取前2个元素: [1,2]
+print(fl.drop(2))   # 删除前2个元素后的列表: [3,4,5]
 """
 
 class FunctionalList(object):

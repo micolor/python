@@ -5,29 +5,29 @@
 # set 的创建
 # set 是一个无序不重复元素集
 set1 = set([123, 456, 789])
-print(set1)
-set1=set([123,456,789,123,123])
-print(set1)
+print('集合1:', set1)
+set1 = set([123, 456, 789, 123, 123])
+print('集合1 (去重后):', set1)
 
 # 2. 集合元素的添加
 # set 添加元素
 set2 = set([123, 456, 789])
-print(set2)
+print('集合2:', set2)
 set2.add(100)
-print(set2)
-set2.add(100)
-print(set2)
+print('集合2 (添加100后):', set2)
+set2.add(100)  # 重复添加不会有影响
+print('集合2 (再次添加100后):', set2)
 
 # 3. 集合元素的删除
 # set 删除元素
 set3 = set([123, 456, 789])
-print(set3)
+print('集合3:', set3)
 set3.remove(123)
-print(set3)
+print('集合3 (删除123后):', set3)
 
 # 4. 集合运算示例
 set4 = set('hello')
-set5 = set(['p','y','y','h','o','n'])
+set5 = set(['p', 'y', 'y', 'h', 'o', 'n'])
 print('集合4:', set4)
 print('集合5:', set5)
 
@@ -46,5 +46,7 @@ print('\nset4对set5的差集:', set8)
 print('set5对set4的差集:', set9)
 
 # 5. 使用集合进行列表去重
-set10 = set(['hello','hello','world','world'])
-print('\n列表去重后的结果:', set10)
+list1 = ['hello', 'hello', 'world', 'world']
+set10 = set(list1)
+print('\n列表去重前:', list1)
+print('列表去重后的结果:', set10)

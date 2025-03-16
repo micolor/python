@@ -16,6 +16,9 @@ class UserInfo(object):
 
     def get_age(self):
         return self.__age
+
+    def set_age(self, age):
+        self.__age = age
     
 
 if __name__ == '__main__':
@@ -26,11 +29,14 @@ if __name__ == '__main__':
     print(user.__dict__)
     print(user.get_age())
     print(user._UserInfo__age)
+    user.set_age(20)
+    print(user.get_age())
 
 # 类专有的方法
 # __init__ 构造函数，在生成对象时调用
 # __del__ 析构函数，释放对象时使用
 # __repr__ 打印，转换
+# __str__ 返回一个对象的字符串表示
 # __setitem__ 按照索引赋值
 # __getitem__ 按照索引获取值
 # __len__ 获得长度
@@ -39,7 +45,8 @@ if __name__ == '__main__':
 # __add__ 加运算
 # __sub__ 减运算
 # __mul__ 乘运算
-# __div__ 除运算
+# __truediv__ 真除运算
+# __floordiv__ 地板除运算
 # __mod__ 求余运算
 # __pow__ 乘方
 
@@ -49,6 +56,7 @@ if __name__ == '__main__':
 # hasattr(obj, attr)：判断对象是否具有指定属性/方法
 # getattr(obj, attr[, default])：获取属性/方法的值，没有则返回 default 值
 # setattr(obj, attr, value)：设定属性/方法的值
+# delattr(obj, attr)：删除属性
 # dir(obj)：获取对象的所有属性和方法名的列表
 
 # 方法的访问控制
@@ -61,4 +69,16 @@ class User(object):
 
     def __private_method(self):
         pass
+
+    def access_methods(self):
+        self.public_method()
+        self._protected_method()
+        self.__private_method()
+
+if __name__ == '__main__':
+    user = User()
+    user.public_method()
+    user._protected_method()
+    # user.__private_method()  # 这行会报错，因为 __private_method 是私有方法
+    user.access_methods()
 

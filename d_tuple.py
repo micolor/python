@@ -4,8 +4,8 @@
 # 能用tuple代替list就尽量用tuple
 
 # 定义一个元组
-tuple1 = ('twowater', '两点水', 'liangdianshui', 123)
-tuple2 = 'twowater', '两点水', 'liangdianshui', 123
+tuple1 = ('aa', 'bb', 'cc', 123)
+tuple2 = 'aa', 'bb', 'cc', 123
 print(tuple1)
 print(tuple2)
 
@@ -29,7 +29,7 @@ print(tuple2[1])
 # 修改元组
 # tuple 所谓的“不变”是说，tuple 的每个元素，指向永远不变
 list1 = [123, 456]
-tuple6 = ('twowater', '两点水', 'liangdianshui', list1)
+tuple6 = ('aa', 'bb', 'cc', list1)
 print(tuple6)
 list1[0] = 111
 list1[1] = 222
@@ -37,7 +37,7 @@ print(tuple6)
 
 # 删除元组
 # 元组中的元素值是不允许删除的，但我们可以使用del语句来删除整个元组
-tuple7 = ('twowater', '两点水', 'liangdianshui', 123)
+tuple7 = ('aa', 'bb', 'cc', 123)
 print(tuple7)
 del tuple7
 

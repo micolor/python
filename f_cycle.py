@@ -1,27 +1,23 @@
 # 循环语句
 
-#for循环语句优化
-#字符 - 使用enumerate
+# for循环语句优化
+# 字符 - 使用enumerate
+# enumerate函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标
 for index, char in enumerate('Hello Python'):
     print(f'位置 {index}: {char}')
 
-#字典遍历优化 - 使用items()
+# 字典遍历优化 - 使用items()
+# items()方法返回一个包含字典所有键值对的视图对象，可以用来遍历字典的键和值
 dict1 = {'a': '小学', 'b': '初中', 'c': '高中', 'd': '大学'}
 for key, value in dict1.items():
     print(f'等级 {key}: {value}')
 
-# a = 100
-# b = 0.01
-# for i in a:
-#     print(i)
-
-# for i in b:
-#     print(i)
-
 # rang() 函数, start, stop, step
-# rang(x) 生成从0到x-1
+# range(x) 生成从0到x-1的整数序列
+# range(start, stop, step) 生成从start到stop-1，步长为step的整数序列
 
 # range循环优化 - 使用列表推导式
+# 列表推导式是一种简洁的创建列表的方式
 numbers = [i for i in range(3)]
 print(numbers)
 
@@ -39,12 +35,13 @@ print(even_numbers)
 count = 1
 sum1 = 0
 while count <= 100:
-  sum1= sum1 + count
-  count = count + 1
+    sum1 = sum1 + count
+    count = count + 1
 print(sum1)
 
 # 嵌套循环
 # for嵌套循环
+# 嵌套循环是指一个循环体内再包含另一个完整的循环结构
 for i in range(1, 10):
     for j in range(1, i+1):
         print('{}x{}={}\t'.format(i, j, i*j), end='')  
@@ -80,6 +77,7 @@ for i in range(1, 10):
         print(i)
 
 # 例子: 判断是否闰年
+# 闰年判断规则：能被4整除但不能被100整除，或者能被400整除的年份
 year = int(input('请输入年份：'))
 if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
     print('{}是闰年'.format(year))
