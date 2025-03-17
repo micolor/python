@@ -8,7 +8,7 @@ age = 23
 print(age.__class__)  # 输出：<class 'int'>
 
 # 字符串
-name = '两点水'
+name = 'AnWen'
 print(name.__class__)  # 输出：<class 'str'>
 
 # 函数

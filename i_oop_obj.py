@@ -41,7 +41,7 @@ try:
 except TypeError as e:
     print(e)  # 输出错误信息
 
-# 新增知识点：类方法和静态方法
+# 类方法和静态方法
 class ClassB:
     name = 'ClassB'
 

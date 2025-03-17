@@ -1,11 +1,11 @@
 # 字符串的定义和打印
 
 # 单引号字符串
-str1 = '两点水'  
+str1 = 'python'  
 # 双引号字符串
-str2 = "两点水"  
+str2 = "python"  
 # 三引号字符串，可以包含换行
-str3 = '''两点水''' 
+str3 = '''python''' 
 print(str1) 
 print(str2)
 print(str3)
